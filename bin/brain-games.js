@@ -1,2 +1,4 @@
 #! /usr/bin/env node
-console.log('Welcome to the Brain Games!');
+import {hello, yourName} from './../src/cli.js';
+hello();
+yourName();
