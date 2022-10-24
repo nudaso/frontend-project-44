@@ -6,5 +6,6 @@ export const hello = () => {
 
 export const yourName = () => {
   const name = readLineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}`);
+  console.log(`Hello, ${name}!`);
+  return name;
 };
