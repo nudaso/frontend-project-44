@@ -20,7 +20,8 @@ const startGame = (listOfQuestionAnswer, essenceMassage) => {
   hello();
   const name = yourName();
   console.log(essenceMassage);
-  for (const [question, correctAnswer] of listOfQuestionAnswer) {
+  for (let i = 0; i < listOfQuestionAnswer.length; i += 1) {
+    const [question, correctAnswer] = listOfQuestionAnswer[i];
     if (!checkAnswer(correctAnswer, getAnswer(question))) {
       console.log(`Let's try again, ${name}!`);
       return;
