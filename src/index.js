@@ -29,7 +29,7 @@ const startGame = (listOfQuestionAnswer, essenceMassage) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-const rnd = (max = 50, min = 0) => Math.floor(min + Math.random() * (max + 1));
+const rnd = (max = 50, min = 0) => Math.floor(min + Math.random() * (max - min + 1));
 
 export {
   startGame,
