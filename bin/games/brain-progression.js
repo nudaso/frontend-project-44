@@ -2,10 +2,10 @@
 import { startGame, rnd } from '../../src/index.js';
 
 const arr = [];
-const essenceMassage = "What number is missing in the progression?";
+const essenceMassage = 'What number is missing in the progression?';
 const indexArr = [];
 const createIndex = (n) => {
-  const index = rnd(n-1);
+  const index = rnd(n - 1);
   if (indexArr.includes(index)) {
     return createIndex(n);
   }
@@ -16,14 +16,11 @@ for (let i = 0; i < 3; i += 1) {
   const step = rnd(10, 1);
   const n = rnd(10, 7);
   const index = createIndex(n);
-  const answer = `${start + step* index}`;
+  const answer = `${start + step * index}`;
   const question = [];
   for (let j = 0; j < n; j += 1) {
-    if (j === index) {
-      question.push("..");
-      continue;
-    }
-    question.push(start + step*j);
+    const add = j === index ? '..' : start + step * i;
+    question.push(add);
   }
   arr.push([question.join(' '), answer]);
 }
