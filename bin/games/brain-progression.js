@@ -19,7 +19,7 @@ for (let i = 0; i < 3; i += 1) {
   const answer = `${start + step * index}`;
   const question = [];
   for (let j = 0; j < n; j += 1) {
-    const add = j === index ? '..' : start + step * i;
+    const add = j === index ? '..' : start + step * j;
     question.push(add);
   }
   arr.push([question.join(' '), answer]);
